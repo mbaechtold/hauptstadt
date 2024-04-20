@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Hauptstadt</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='neat.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+</head>
+<body>
+    {% for article in articles %}
+        <h1>{{ article.title }}</h1>
+        <p>
+            {{ article.description }}<br/>
+            <a href="{{ article.url }}">{{ article.url }}</a><br/>
+            {{ article.publish_date }}
+        </p>
+    {% endfor %}
+</body>
+</html>
